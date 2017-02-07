@@ -1,7 +1,7 @@
 galaxy_info:
-  author: your name
+  author: Alexander Trost aka galexrt
   description: your description
-  company: your company (optional)
+  company:
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
@@ -14,7 +14,7 @@ galaxy_info:
   # - GPLv3
   # - Apache
   # - CC-BY
-  license: license (GPLv2, CC-BY, etc)
+  license: MIT
 
   min_ansible_version: 1.2
 
@@ -31,7 +31,7 @@ galaxy_info:
   # the ones that apply to your role. If you don't see your
   # platform on this list, let us know and we'll get it added!
   #
-  #platforms:
+  platforms:
   #- name: OpenBSD
   #  versions:
   #  - all
@@ -40,8 +40,8 @@ galaxy_info:
   #  - 5.8
   #  - 5.9
   #  - 6.0
-  #- name: Fedora
-  #  versions:
+  - name: Fedora
+    versions:
   #  - all
   #  - 16
   #  - 17
@@ -50,9 +50,9 @@ galaxy_info:
   #  - 20
   #  - 21
   #  - 22
-  #  - 23
-  #  - 24
-  #  - 25
+    - 23
+    - 24
+    - 25
   #- name: DellOS
   #  versions:
   #  - all
@@ -125,8 +125,8 @@ galaxy_info:
   #  - 9.1
   #  - 9.2
   #  - 9.3
-  #- name: Ubuntu
-  #  versions:
+  - name: Ubuntu
+    versions:
   #  - all
   #  - lucid
   #  - maverick
@@ -138,20 +138,20 @@ galaxy_info:
   #  - saucy
   #  - trusty
   #  - utopic
-  #  - vivid
-  #  - wily
-  #  - xenial
+    - vivid
+    - wily
+    - xenial
   #  - yakkety
-  #- name: Debian
-  #  versions:
+  - name: Debian
+    versions:
   #  - all
   #  - etch
-  #  - jessie
+    - jessie
   #  - lenny
   #  - sid
   #  - squeeze
   #  - stretch
-  #  - wheezy
+    - wheezy
   #- name: Alpine
   #  versions:
   #  - all

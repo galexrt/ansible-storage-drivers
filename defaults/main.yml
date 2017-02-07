@@ -1,2 +1,9 @@
 ---
 # defaults file for ansible-storage-drivers
+storage_drivers_ceph_packages_deb:
+  - ceph-fs-common
+  - ceph-common
+storage_drivers_ceph_packages_rhel:
+  - ceph
+
+storage_drivers_install_ceph: true
