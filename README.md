@@ -1,38 +1,51 @@
-Role Name
-=========
+ansible-storage-drivers
+=======================
 
-A brief description of the role goes here.
+Ansible role for installation of storage drivers, like Ceph.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+No special requirements.
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+```
+# packages for debian and ubuntu
+storage_drivers_ceph_packages_deb:
+  - ceph-fs-common
+  - ceph-common
+# packages for not debian and ubuntu
+storage_drivers_ceph_packages_rhel:
+  - ceph
+
+# if ceph "drivers" should be installed
+storage_drivers_install_ceph: true
+```
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+No dependencies.
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+An example playbook on how to use this role:
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+```
+- hosts: servers
+  roles:
+     - { role: galexrt.storage-drivers, storage_drivers_install_ceph: true }
+```
 
 License
 -------
 
-BSD
+MIT
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+If you have problems with the role, feel free to create an issue on Github or contact me by mail.
