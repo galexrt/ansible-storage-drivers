@@ -3,8 +3,8 @@
 - name: Install ceph packages for rhel
   action: "{{ ansible_pkg_mgr }}"
   args:
-  name: "{{ item }}"
-  state: latest
+    name: "{{ item }}"
+    state: latest
   with_items:
     - "{{ storage_drivers_ceph_packages_rhel }}"
   when: ansible_distribution != "Debian" and ansible_distribution != "Ubuntu"
